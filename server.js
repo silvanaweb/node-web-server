@@ -48,6 +48,7 @@ hbs.registerHelper('screamIt', (text) => {
 });
 
 app.get('/', (req, res) => {
+    // send json object
     // res.send('<h1>hello Express!</h1>');
     // res.send({
     //     name: 'Mike',
@@ -64,6 +65,11 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: "About page"
+    });
+});
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: "Projects page"
     });
 });
 
